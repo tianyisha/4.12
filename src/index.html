@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="scss/index.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="left">
+                <i class='iconfont icon-xiangzuo'></i>
+            </div>
+            <div class="center">
+                <span>无连接</span>
+            </div>
+            <div class="right">
+                <i class='iconfont icon-shouqi-01'>
+
+               </i>
+            </div>
+
+        </header>
+        <section class="main">
+            <ul>
+                <li>电源</li>
+                <li>首页</li>
+                <li>菜单</li>
+                <li>截屏</li>
+            </ul>
+            <ol>
+                <li>111111</li>
+                <li>22222</li>
+                <li>33333</li>
+                <li>44444</li>
+            </ol>
+        </section>
+        <footer class="footer">
+            <a href="javascript:;">
+                <i class='iconfont icon-wode'></i>
+                <p>我的</p>
+            </a>
+            <a href="javascript:;">
+                <i class='iconfont icon-wode'></i>
+                <p>我的</p>
+            </a>
+            <a href="javascript:;">
+                <i class='iconfont icon-wode'></i>
+                <p>我的</p>
+            </a>
+            <a href="javascript:;">
+                <i class='iconfont icon-wode'></i>
+                <p>我的</p>
+            </a>
+            <a href="javascript:;">
+                <i class='iconfont icon-wode'></i>
+                <p>我的</p>
+            </a>
+        </footer>
+    </div>
+    <script src='./js/flexible.js'></script>
+    <script>
+        var ulis = [...document.querySelectorAll('ul li')];
+        var olis = [...document.querySelectorAll('ol li')];
+        ulis.forEach(function(item, index) {
+            item.onclick = function() {
+                for (var j = 0; j < ulis.length; j++) {
+                    ulis[j].classList.remove('active');
+                    olis[j].style.display = 'none';
+                }
+                ulis[index].classList.add('active');
+                olis[index].style.display = 'block';
+            }
+        })
+    </script>
+</body>
+
+</html>

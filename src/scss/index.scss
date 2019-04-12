@@ -1,0 +1,83 @@
+@import './_minix';
+@import './common';
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .header {
+        width: 100%;
+        height: px2rem(44px);
+        background: red;
+        display: flex;
+        .left {
+            width: px2rem(44px);
+            height: px2rem(44px);
+            text-align: center;
+            line-height: px2rem(44px);
+        }
+        .center {
+            flex: 1;
+            text-align: center;
+            font-size: px2rem(16px);
+            line-height: px2rem(44px);
+        }
+        .right {
+            width: px2rem(44px);
+            height: px2rem(44px);
+            text-align: center;
+            line-height: px2rem(44px);
+        }
+    }
+    .main {
+        width: 100%;
+        flex: 1;
+        background: #f5f7f7;
+        padding: 0 px2rem(10px);
+        ul {
+            width: px2rem(350px);
+            height: px2rem(50px);
+            display: flex;
+            li {
+                width: px2rem(90px);
+                height: px2rem(50px);
+                border: 1px solid #ccc;
+                text-align: center;
+                line-height: px2rem(50px);
+            }
+        }
+        ol {
+            width: px2rem(350px);
+            height: px2rem(300px);
+            li {
+                width: px2rem(350px);
+                height: px2rem(300px);
+                border: 1px solid #ccc;
+                text-align: center;
+                line-height: px2rem(300px);
+                font-size: px2rem(18px);
+                display: none;
+            }
+            li:nth-child(1) {
+                display: block;
+            }
+        }
+        .active {
+            background: orange;
+        }
+    }
+    .footer {
+        width: 100%;
+        height: px2rem(50px);
+        background: skyblue;
+        display: flex;
+        a {
+            width: 20%;
+            text-align: center;
+            font-size: px2rem(18px);
+            i {
+                font-size: px2rem(16px);
+            }
+        }
+    }
+}
